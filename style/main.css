@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #1a1a1a;
+  color: white;
+}
+
+.wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+div {
+  margin: 3rem auto;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18pt;
+}
+
+h1::before {
+  content: '"';
+  color: white;
+  opacity: .2;
+  font-size: 80pt;
+  position: relative;
+  left: 2rem;
+  top: 2rem;
+}
+
+h1::after {
+  content: '';
+  border-bottom: 2px solid #6b6b6b;
+  width: 100%;
+  display: block;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18pt;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+ul li {
+  margin: auto 3rem;
+  -webkit-transform: translate(-40%, 0);
+          transform: translate(-40%, 0);
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 14pt;
+}
+
+._1st > ul > li::after {
+  content: '';
+  border-bottom: 2px solid #b82cb8;
+  width: 1rem;
+  display: block;
+  -webkit-transition: width 0.3s ease 0s;
+  transition: width 0.3s ease 0s;
+}
+
+._1st > ul > li:hover::after {
+  width: 100%;
+}
+
+._2nd > ul > li:nth-child(2)::after {
+  content: '';
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid yellow;
+}
+
+._2nd > ul > li:nth-child(2):hover::after {
+  margin-left: 100%;
+}
+
+._3rd > ul > li {
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  background: red;
+  background-size: 0%;
+}
+/*# sourceMappingURL=main.css.map */

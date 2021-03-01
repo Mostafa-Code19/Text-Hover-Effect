@@ -1,0 +1,93 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+}
+.wrapper{
+    max-width: 880px;
+    margin: 0 auto;
+}
+div{
+    margin: 3rem auto
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font: {
+        size: 18pt;
+    }
+    &::before{
+        content: '"';
+        color: white;
+        opacity: .2;
+        font: {
+            size: 80pt;
+        }
+        position: relative;
+        left: 2rem;
+        top: 2rem;
+    }
+    &::after{
+        content: '';
+        border-bottom: 2px solid #6b6b6b;
+        width: 100%;
+        display: block;
+    }
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font: {
+        size: 18pt;
+    }
+}
+h3{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+ul{
+    list-style: none;
+    display: inline-flex;
+    li{
+        margin: auto 3rem;
+        transform: translate(-40%, 0);
+        cursor: pointer;
+        font-family: 'Courier New', Courier, monospace;
+        font: {
+            weight: 600;
+            size: 14pt;
+        }
+    }
+}
+// 1st
+._1st > ul > li {
+    &::after{
+        content: '';
+        border-bottom: 2px solid #b82cb8;
+        width: 1rem;
+        display: block;
+        transition: width 0.3s ease 0s;   
+    }
+    &:hover::after{
+        width: 100%;
+        }
+}
+// 2nd
+._2nd > ul > li {
+    &:nth-child(2){
+        &::after{
+            content: '';
+            width: 100%;
+            display: block;
+            border-bottom: 2px solid yellow;
+        }
+        &:hover::after {
+            margin-left: 100%
+        }
+    }
+}
+//3rd
+._3rd > ul > li {
+    transition: height 0.3s ease-in-out;
+    background: red;
+    background-size: 0%;
+}
